@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+html {
+    font-size: 14px;
+    font-family: 'Red Hat Text', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--mostly-dark-blue);
+    background-image: url('./images/bg-stars.svg');
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 75%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+
+:root {
+    /* primary */
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+
+    /* neutral */
+    --white: hsl(0, 0%, 100%);
+    --dark-red: hsl(345, 48%, 57%);
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --mostly-dark-blue: hsl(234, 17%, 12%);
+    --very-dark-desaturated-blue: hsl(236, 21%, 20%);
+}
+
+
+/* main section  */
+main {
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 10px;
+    position: relative;
+    top: 15%;
+    width: 100%;
+}
+main h2 {
+    color: var(--white);
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+/* clock */
+.clock {
+    display: flex;
+    justify-content: space-between;
+    color: var(--grayish-blue);
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.card-container {
+    display: flex;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+.time-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.time-card p {
+    font-size: .5rem;
+}
+.card {
+    border-radius: 5px;
+    background: linear-gradient(var(--very-dark-desaturated-blue) 50%, var(--dark-desaturated-blue) 50%);
+    font-size: 3rem;
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--soft-red);
+}
+.card::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--mostly-dark-blue);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.card::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--mostly-dark-blue);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+}
+.card span {
+    position: relative;
+}
+.card span:before {
+    content: attr(attribute);
+    color: var(--dark-red);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    overflow: hidden;
+}
+/* clock end */
+
+/* main section  end*/
+
+/* footer */
+footer {
+    background: url('./images/pattern-hills.svg');
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+footer a {
+    margin-top: 3rem;
+}
+footer i {
+    height: 30px;
+    width: 30px;
+    color: var(--grayish-blue);
+    transition: all .5s;
+}
+footer i:hover {
+    color: var(--soft-red);
+}
+
+/* footer end */
+
+@media (min-width:900px){
+    .time-card p {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        width: 80%;
+        height: 120px;
+        font-size: 5rem;
+    }
+}

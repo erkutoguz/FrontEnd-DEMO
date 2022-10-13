@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+
+:root {
+    /* Primary */
+    --soft-cyan:hsl(174, 77%, 80%);
+    --strong-cyan:hsl(174, 86%, 45%);
+    --very-strong-cyan:hsl(174, 86%, 35%);
+    --light-grayish-red:hsl(14, 92%, 95%);
+    --light-red:hsl(15, 100%, 70%);
+    --pale-blue:hsl(226, 100%, 87%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --very-pale-blue: hsl(230, 100%, 99%);
+    --light-grayish-blue: hsl(224, 65%, 95%);
+    --light-grayish-blue-toogle: hsl(223, 50%, 87%);
+    --grayish-blue: hsl(225, 20%, 60%);
+    --dark-desaturated-blue: hsl(227, 35%, 25%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: url(./images/bg-pattern.svg) no-repeat;
+    background-position: top center;
+    background-color: var(--very-pale-blue);
+    font-family: manrope, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    background: url(./images/pattern-circles.svg) no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+}
+header  h2 {
+    color: var(--dark-desaturated-blue);
+    font-size: 1.4rem;
+}
+header p {
+    color: var(--grayish-blue);
+    position: relative;
+    top: .5rem;
+    font-size: 15px;
+}
+header p > span {
+    display: block;
+}
+.card {
+    background-color: var(--white);
+    box-shadow: 0 5px 20px rgba(140, 140, 150, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 375px;
+    position: relative;
+    top: -5rem;
+}
+.card main {
+    width: 90%;
+    display: grid;
+    gap: 2.5rem;
+    justify-items: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+.card main h4 {
+    color: var(--grayish-blue);
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--light-grayish-blue) 50%, var(--light-grayish-blue) 50%);
+    outline: none;
+}
+.slider::-webkit-slider-thumb {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: url(./images/icon-slider.svg) no-repeat;
+    background-position: center;
+    background-color: var(--strong-cyan);
+    box-shadow: 0 10px 30px var(--strong-cyan);
+}
+.slider::-webkit-slider-thumb:hover {
+    background-color: var(--very-strong-cyan);
+}
+
+.slider::-moz-slider-thumb {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: url(./images/icon-slider.svg) no-repeat;
+    background-position: center;
+    background-color: var(--strong-cyan);
+    box-shadow: 0 10px 30px var(--strong-cyan);
+}
+.slider::-moz-slider-thumb:hover {
+    background-color: var(--very-strong-cyan);
+}
+.card main h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-desaturated-blue);
+    gap: 10px;
+    font-size: 2.7rem;
+}
+.card main h1 small {
+    color: var(--grayish-blue);
+    font-size: 1rem;
+}
+.card main .main-end {
+    width: 90%;
+    display: flex;
+    margin-top: -0.5rem;
+    position: relative;
+    gap: 0.8rem;
+    padding-left: 10px;
+}
+.card main .main-end span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--grayish-blue);
+}
+.card main .main-end span:last-child::after {
+    content: "-25%";
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    right: -4%;
+    padding: 3px 9px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--light-red);
+    border-radius: 50px;
+    background-color: var(--light-grayish-red);
+}
+.card main .main-end input:checked + label + span::after {
+    box-shadow: 0 0 10px var(--light-red);
+}
+.card main .main-end input {
+    display: none;
+}
+.card main .main-end label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.card main .main-end label::before{
+    content: "";
+    width: 40px;
+    height: 20px;
+    border-radius: 50px;
+    background-color:var(--light-grayish-blue-toogle);
+}
+.card main .main-end label::after{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    background-color:var(--white);
+    position: absolute;
+    left: 4px;
+    transition: transform .5s;
+}
+
+.card main .main-end input:checked + label::after{
+    transform: translateX(18px);
+}
+.card main .main-end input:checked + label::before{
+    background-color: var(--strong-cyan);
+    box-shadow: 0 0 10px var(--strong-cyan);
+}
+.card footer {
+    width: 100%;
+    border-top: 1px solid var(--light-grayish-blue);
+    padding: 2.3rem 0;
+    display: grid;
+    gap: 2.5rem;
+    justify-items: center;
+}
+.card footer .features {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.card footer .features small {
+    font-size: .8rem;
+    color: var(--grayish-blue);
+}
+.card footer .features small img {
+    margin-right: 15px;
+}
+.card footer button {
+    width: 55%;
+    color: var(--pale-blue);
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 50px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+}
+.card footer button:hover {
+    color: var(--white);
+}
+@media (min-width:1200px) {
+    .card {
+        width: 700px;
+    }
+    .card main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .card main h4 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .card main input {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .card main h1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .card main .main-end {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        align-items: center;
+        justify-content: center;
+    }
+    .card main .main-end span:last-child::after {
+        content: '25% discount';
+        width: 75px;
+        position: relative;
+        margin-left: 10px;
+    }
+    .card footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .card footer button {
+        width: 25%;
+    }
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+body {
+    align-items: center;
+    background-color: hsl(216, 12%, 8%);
+    display: flex;
+    font-family: 'Overpass', sans-serif;
+    height: 100vh;
+    justify-content: center;
+}
+button {
+    cursor: pointer;
+}
+h1 {
+    color: white;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+input {
+    display: none;
+}
+
+p {
+    color: hsl(216, 12%, 54%);
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.back-card{
+    display: none !important;
+}
+.clicked {
+    background-color: hsl(217, 12%, 63%) !important;
+    color: white !important;
+}
+.card {
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 25px;
+    height: 344px;
+    padding: 20px;
+    width: 340px;
+}
+.rate {
+    background-color:hsl(214, 20%, 25%);
+    border: 0;
+    border-radius: 50%;
+    color: hsl(216, 12%, 54%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    height: 52px;
+    text-align: center;
+    width: 52px;
+}
+.rate:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    cursor: pointer;
+}
+.rates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.second-card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#selected-p {
+    background-color: hsl(214, 20%, 25%);
+    border-radius: 20px;
+    color: orange;
+    font-weight: 400;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+#star-img {
+    background-color: hsl(214, 20%, 25%);
+    border-radius: 50%;
+    padding: 18px 17.5px;
+}
+#submit {
+    background-color: hsl(25, 97%, 53%);
+    border: 0;
+    border-radius: 25px;
+    color: white;
+    font-weight: 700;
+    height: 52px;
+    letter-spacing: 4px;
+    width: 100%;
+}
+#submit:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+#thank-you-img {
+    margin-bottom: 30px;
+}

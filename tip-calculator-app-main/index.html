@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+  <div class="logo">
+    <img src="./images/logo.svg">
+  </div>
+  <div class="container">
+
+    <div class="card">
+
+      <div class="bill">
+        <p class="title">Bill</p>
+
+        <div class="user-input">
+          <img src="./images/icon-dollar.svg" class="input-sign">
+          <input type="text" class="input" placeholder="0" id="bill-input">
+        </div>
+      </div>
+
+      <div class="tip-select">
+        <p class="title">Select Tip %</p>
+        <div class="tip-rates">
+          <label for="per5" class="rate-btn">
+            5%
+            <input type="radio" name="percent" id="per5" value="5">
+          </label>
+          <label for="per10" class="rate-btn">
+            10%
+            <input type="radio" name="percent" id="per10" value="10">
+          </label>
+          <label for="per15" class="rate-btn">
+            15%
+            <input type="radio" name="percent" id="per15" value="15">
+          </label>
+          <label for="per25" class="rate-btn">
+            25%
+            <input type="radio" name="percent" id="per25" value="25">
+          </label>
+          <label for="per50" class="rate-btn">
+            50%
+            <input type="radio" name="percent" id="per50" value="50">
+          </label>
+
+          <input type="text" placeholder="Custom" class="rate-btn" id="tip-input">
+
+        </div>
+      </div>
+      <div class="alert-sec">
+        <p class="title">Number of People</p>
+        <p id="alert-p"></p>
+      </div>
+      <div class="user-input">
+        <img src="./images/icon-person.svg" class="input-sign">
+        <input type="text" class="input" placeholder="0" id="nop-input">
+      </div>
+
+    </div>
+
+    <div class="card">
+
+
+      <div class="result">
+        <div class="info">
+          <div class="amount">
+            <div class="text">
+              <p class="title white">Tip Amount</p>
+              <p class="small">/ person</p>
+            </div>
+
+            <div class="number">
+              <p class="total" id="person-tip">$0.00</p>
+            </div>
+          </div>
+
+          <div class="amount">
+            <div class="text">
+              <p class="title white">Total</p>
+              <p class="small">/ person</p>
+            </div>
+
+            <div class="number">
+              <p class="total" id="total-tip">$0.00</p>
+            </div>
+          </div>
+        </div>
+        <button class="reset">RESET</button>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
